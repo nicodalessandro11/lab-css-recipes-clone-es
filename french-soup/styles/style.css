@@ -1,9 +1,78 @@
-/*Some necessary adjustments*/
-h1, body, html, main {
-  margin: 0;
+/* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0;
 }
-/*Import the font and set the default size*/
-html {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+}
+
+header {
+  height: 500px;
+  background-image: url("../images/soup.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+/* Main Section Styling */
+main img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+main {
+  padding: 4rem;
+}
+
+main section {
+  padding: 1rem 0;
+}
+
+#recipe-information p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 0 2.5rem 0;
+  text-align: justify;
+}
+
+#ingredients ul {
+  list-style-type: "- ";
+  margin: 0 0 1rem 1rem;
+}
+
+#directions ol {
+  list-style-type: none;
+  counter-reset: section;
+}
+
+#directions ol li::before {
+  content: "" counter(section) ") ";
+  counter-increment: section;
+}
+
+#directions li {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 0 1rem 1rem;
 }
